@@ -1,0 +1,12 @@
+{
+    "name": "passh/monad",
+    "authors": [
+        {
+            "name": "pascual"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "": "src/" }
+    },
+    "require": {}
+}
