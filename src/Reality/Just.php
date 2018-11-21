@@ -1,4 +1,5 @@
 <?php
+
 namespace Reality;
 
 use FantasyLand\Applicative;
@@ -15,30 +16,28 @@ class Just extends Maybe
         return $this->value;
     }
 
-    //named constructor : of
-    private function __construct($value)
+    public function __construct($value)
     {
         $this->value = $value;
     }
-    static function of($value): Applicative
-    {
-        return new self($value);
-    }
 
 
-    function Chain(): Chain
+    public function chain(): Chain
     {
     }
 
-    function ap(Apply $possibleFunction): Apply
+    /*
+     *ap :: Apply f => f a ~> f (a -> b) -> f b
+     */
+    public function ap(Apply $possibleFunction): Apply
     {
-        // TODO: Implement ap() method.
+        return ($possibleFunction instanceof Just)?Maybe::of(($possibleFunction->value())($this->value)):new Nothing();
     }
 
 
-    function map($proyectionFunction)
-    {
-       return Just::of($proyectionFunction($this->value));
-    }
+//    public function map($proyectionFunction)
+//    {
+//        return Maybe::of($proyectionFunction($this->value));
+//    }
 
 }

@@ -10,14 +10,9 @@ class Nothing extends Maybe
 {
 
     //named constructor of
-    private function __construct($anyValue)
+    public function __construct()
     {
         return $this;
-    }
-
-    static function of($anyValue): Applicative
-    {
-        return new self($anyValue);
     }
 
     function chain(): Chain
