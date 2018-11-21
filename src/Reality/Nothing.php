@@ -15,7 +15,8 @@ class Nothing extends Maybe
         return $this;
     }
 
-    function chain(): Chain
+
+    public function chain(\Closure $functionThatReturnsChain): Chain
     {
         return $this;
     }

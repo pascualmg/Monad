@@ -21,8 +21,15 @@ class Just extends Maybe
     }
 
 
-    public function chain(): Chain
+    public function chain(\Closure $functionThatReturnsChain = null): Chain
     {
+        $result = $functionThatReturnsChain($this->value);
+
+        if (!$result instanceof Maybe) {
+            throw new \Exception("la funcion de proyeccion de Chain ha de retornar una Maybe");
+        }
+
+        return $result;
     }
 
     /*
