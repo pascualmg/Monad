@@ -7,7 +7,7 @@ use FantasyLand\Monad;
 
 abstract class Maybe implements Monad
 {
-    static function of($value): Applicative
+    static function of($value = null): Applicative
     {
         if (null === $value) {
            return new Nothing();
