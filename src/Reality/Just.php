@@ -1,6 +1,10 @@
 <?php
 namespace Reality;
 
+use FantasyLand\Applicative;
+use FantasyLand\Apply;
+use FantasyLand\Chain;
+
 class Just extends Maybe
 {
 
@@ -12,9 +16,9 @@ class Just extends Maybe
     }
 
     //named constructor : of
-    public function __construct($value)
+    private function __construct($value)
     {
-        return new self($this->value);
+        $this->value = $value;
     }
     static function of($value): Applicative
     {
