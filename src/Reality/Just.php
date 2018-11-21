@@ -2,7 +2,6 @@
 
 namespace Reality;
 
-use FantasyLand\Applicative;
 use FantasyLand\Apply;
 use FantasyLand\Chain;
 
@@ -27,11 +26,15 @@ class Just extends Maybe
     }
 
     /*
+     * Apply f
      *ap :: Apply f => f a ~> f (a -> b) -> f b
      */
     public function ap(Apply $possibleFunction): Apply
     {
-        return ($possibleFunction instanceof Just)?Maybe::of(($possibleFunction->value())($this->value)):new Nothing();
+        return ($possibleFunction instanceof Just)?
+            Maybe::of(($possibleFunction->value())($this->value))//new Just
+            :
+            Maybe::of();//new Nothing
     }
 
 
