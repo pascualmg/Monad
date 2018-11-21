@@ -10,7 +10,7 @@ class Just extends Maybe
 
     private $value;
 
-    function value()
+    public function value()
     {
         return $this->value;
     }
@@ -38,7 +38,7 @@ class Just extends Maybe
 
     function map($proyectionFunction)
     {
-        // TODO: Implement map() method.
+       return $proyectionFunction($this->value);
     }
 
 }

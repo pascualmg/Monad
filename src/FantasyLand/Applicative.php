@@ -9,5 +9,5 @@ namespace FantasyLand;
 
 interface Applicative extends Apply
 {
-    static function of($value) : Applicative;
+    static function of($value) :Applicative;
 }
