@@ -38,7 +38,7 @@ class Just extends Maybe
 
     function map($proyectionFunction)
     {
-       return $proyectionFunction($this->value);
+       return Just::of($proyectionFunction($this->value));
     }
 
 }
