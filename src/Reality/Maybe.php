@@ -16,6 +16,6 @@ abstract class Maybe implements Monad
     }
     public function map($proyectionFunction)
     {
-        return $this->ap(self::of($proyectionFunction));
+        return $this->ap(Maybe::of($proyectionFunction));
     }
 }
