@@ -2,17 +2,21 @@
 
 namespace Reality;
 
+use FantasyLand\Applicative;
+use FantasyLand\Chain;
+
 class Nothing extends Maybe
 {
 
     //named constructor of
-    private function __construct()
+    private function __construct($anyValue)
     {
+        return $this;
     }
 
-    static function of(): Applicative
+    static function of($anyValue): Applicative
     {
-        return new Nothing();
+        return new self($anyValue);
     }
 
     function Chain(): Chain
