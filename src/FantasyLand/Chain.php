@@ -10,5 +10,5 @@ namespace FantasyLand;
 
 interface Chain extends Apply
 {
-    function Chain() :Chain;
+    function chain() :Chain;
 }

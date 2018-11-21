@@ -19,7 +19,7 @@ class Nothing extends Maybe
         return new self($anyValue);
     }
 
-    function Chain(): Chain
+    function chain(): Chain
     {
         return $this;
     }
