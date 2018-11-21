@@ -5,6 +5,7 @@ require_once  '../vendor/autoload.php';
 use Reality\Just;
 use Reality\Maybe;
 use Reality\Nothing;
+use Rx\Observable;
 
 $just4 = Just::of(4);
 $nothing = Nothing::of("false xD");

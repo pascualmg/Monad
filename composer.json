@@ -8,5 +8,8 @@
     "autoload": {
         "psr-4": { "": "src/" }
     },
-    "require": {}
+    "require-dev": {
+        "reactivex/rxphp": "^2.0",
+        "react/event-loop": "^1.0"
+    }
 }
