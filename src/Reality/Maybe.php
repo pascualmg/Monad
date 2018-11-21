@@ -10,7 +10,7 @@ abstract class Maybe implements Monad
     static function of($value): Applicative
     {
         if (null === $value) {
-           return new Nothing($value);
+           return new Nothing();
         }
         return new Just($value);
     }
