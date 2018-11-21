@@ -43,11 +43,4 @@ class Just extends Maybe
             :
             Maybe::of();//new Nothing
     }
-
-
-//    public function map($proyectionFunction)
-//    {
-//        return Maybe::of($proyectionFunction($this->value));
-//    }
-
 }
