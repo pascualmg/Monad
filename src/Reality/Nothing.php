@@ -20,16 +20,8 @@ class Nothing extends Maybe
         return $this;
     }
 
-
     function ap(Apply $possibleFunction): Apply
     {
         return $this;
     }
-
-
-    function map($proyectionFunction)
-    {
-        return $this;
-    }
-
 }
