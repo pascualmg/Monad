@@ -6,6 +6,8 @@
  * Time: 22:48
  */
 
+namespace FantasyLand;
+
 interface Monad extends  Applicative, Chain
 {
 }

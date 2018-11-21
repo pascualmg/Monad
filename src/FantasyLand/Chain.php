@@ -6,6 +6,8 @@
  * Time: 23:11
  */
 
+namespace FantasyLand;
+
 interface Chain extends Apply
 {
     function Chain() :Chain;

@@ -6,6 +6,8 @@
  * Time: 23:01
  */
 
+namespace FantasyLand;
+
 interface Functor
 {
     function map($proyectionFunction);

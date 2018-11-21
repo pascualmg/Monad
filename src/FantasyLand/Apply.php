@@ -5,6 +5,7 @@
  * Date: 19/11/2018
  * Time: 23:04
  */
+namespace FantasyLand;
 
 interface Apply extends Functor
 {

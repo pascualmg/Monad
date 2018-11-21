@@ -1,4 +1,5 @@
 <?php
+namespace Reality;
 
 class Just extends Maybe
 {
@@ -11,13 +12,13 @@ class Just extends Maybe
     }
 
     //named constructor : of
-    private function __construct($value)
+    public function __construct($value)
     {
         return new self($this->value);
     }
     static function of($value): Applicative
     {
-        return new Just($value);
+        return new self($value);
     }
 
 

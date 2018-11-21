@@ -1,5 +1,7 @@
 <?php
 
+namespace Reality;
+
 class Nothing extends Maybe
 {
 
@@ -8,7 +10,7 @@ class Nothing extends Maybe
     {
     }
 
-    static function of($value): Applicative
+    static function of(): Applicative
     {
         return new Nothing();
     }
