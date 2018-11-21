@@ -2,6 +2,8 @@
 
 namespace Reality;
 
-abstract class Maybe implements FantasyLand\Monad
+use FantasyLand\Monad;
+
+abstract class Maybe implements Monad
 {
 }
