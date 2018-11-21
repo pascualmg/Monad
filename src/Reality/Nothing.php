@@ -3,6 +3,7 @@
 namespace Reality;
 
 use FantasyLand\Applicative;
+use FantasyLand\Apply;
 use FantasyLand\Chain;
 
 class Nothing extends Maybe
