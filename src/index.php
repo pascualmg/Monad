@@ -2,7 +2,6 @@
 
 require_once  '../vendor/autoload.php';
 
-use FantasyLand\Monad;
 use React\EventLoop\Factory;
 use Reality\Just;
 use Reality\Maybe;
