@@ -11,16 +11,24 @@ use Reality\Nothing;
 use Rx\Observable;
 use Rx\Scheduler;
 
-try {
-    $loop = Factory::create();
-    Scheduler::setDefaultFactory(function () use ($loop){
-    return new Scheduler\EventLoopScheduler($loop);
-});
-} catch (\Exception $exception) {
-    print_r("No se ha podido inicial el loOps " ,$exception);
+/**
+ * @return \React\EventLoop\LoopInterface
+ */
+function lesgo(): \React\EventLoop\LoopInterface
+{
+    try {
+        $loop = Factory::create();
+        Scheduler::setDefaultFactory(function () use ($loop) {
+            return new Scheduler\EventLoopScheduler($loop);
+        });
+    } catch (\Exception $exception) {
+        print_r("No se ha podido inicial el loOps ", $exception);
+    }
+    printf("LoOp On");
+    return $loop;
 }
 
-printf("LoOp On");
+$loop = lesgo();
 
 $ObservableDeUnaMaybeJust = Observable::of(Maybe::of([2,3,4]))
 ->subscribe('print_r');
