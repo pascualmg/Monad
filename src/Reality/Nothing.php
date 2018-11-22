@@ -25,4 +25,6 @@ class Nothing extends Maybe
     {
         return $this;
     }
+    function value() {
+    }
 }
